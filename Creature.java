@@ -8,8 +8,8 @@ import java.util.Random;
 
 public class Creature
 {
-   private int hp;
-   private int strength;
+   public int hp;
+   public int strength;
    /**
     * constructor 
     */
