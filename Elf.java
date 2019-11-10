@@ -1,9 +1,9 @@
 import java.util.concurrent.ThreadLocalRandom;
 /**
- * Write a description of class Elf here.
+ * magical creature 
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Lindgren
+ * @version 11/10/19
  */
 public class Elf extends Creature
 {
@@ -17,9 +17,13 @@ public class Elf extends Creature
        super(ThreadLocalRandom.current().nextInt(8,25), ThreadLocalRandom.current().nextInt(5,19));
         
     }
+    /**
+     * Damage 
+     * @override super
+     */
     public int damage ()
     {
-        if(ThreadLocalRandom.current().nextInt(1, 11) == 1)
+        if(ThreadLocalRandom.current().nextInt(0, 10) == 1)
         {
             return super.damage() *2 ;
             
