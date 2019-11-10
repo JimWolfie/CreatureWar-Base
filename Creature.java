@@ -1,4 +1,4 @@
-import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 /**
  * creature class for war project. parent class to different race sublcasses
  * 
@@ -8,13 +8,15 @@ import java.util.Random;
 
 public class Creature
 {
-   public int hp;
-   public int strength;
+   protected int hp;
+   protected int strength;
+   
    /**
     * constructor 
     */
    public Creature()
    {
+       
        this.hp=10;
        this.strength =10;
        
@@ -35,8 +37,16 @@ public class Creature
     */ 
    public int damage()
    {
-      Random ran = new Random();
-       return ran.nextInt(this.strength)+1;
-    }
+      
+       return ThreadLocalRandom.current().nextInt(this.strength)+1;
+   }
+   public boolean isAlive()
+   {
+       if(hp >0)
+       {
+           return true;
+       }
+       return false;
+   }
     
 }
