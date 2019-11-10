@@ -1,4 +1,4 @@
-
+import java.util.Random;
 /**
  * creature class for war project. parent class to different race sublcasses
  * 
@@ -29,10 +29,14 @@ public class Creature
        this.hp = hp; 
        this.strength = strength;
     }
-    
-   public int damage(){
-       //TODO: change this
-       return 0;
+   /**
+    * damage
+    * @return - a random number between 1 and strength
+    */ 
+   public int damage()
+   {
+      Random ran = new Random();
+       return ran.nextInt(this.strength)+1;
     }
     
 }

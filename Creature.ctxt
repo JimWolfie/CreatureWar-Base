@@ -1,6 +1,13 @@
 #BlueJ class context
-comment0.params=
-comment0.target=Creature()
+comment0.target=Creature
+comment0.text=\r\n\ creature\ class\ for\ war\ project.\ parent\ class\ to\ different\ race\ sublcasses\r\n\ \r\n\ @author\ nicholas\ lindgren\r\n\ @version\ 11/10/19\r\n
 comment1.params=
-comment1.target=int\ damage()
-numComments=2
+comment1.target=Creature()
+comment1.text=\r\n\ constructor\ \r\n
+comment2.params=hp\ strength
+comment2.target=Creature(int,\ int)
+comment2.text=\r\n\ Constructor\ \r\n\ @param\ hp\r\n\ @param\ strength\ \r\n
+comment3.params=
+comment3.target=int\ damage()
+comment3.text=\r\n\ damage\r\n\ @return\ -\ a\ random\ number\ between\ 1\ and\ strength\r\n
+numComments=4
