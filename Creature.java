@@ -31,6 +31,15 @@ public class Creature
        this.hp = hp; 
        this.strength = strength;
     }
+    /**
+     * take Wound
+     * @param damage
+     * 
+     */
+    public void takeWound(int damage)
+    {
+        this.hp = hp-damage;
+    }
    /**
     * damage
     * @return - a random number between 1 and strength
@@ -42,7 +51,7 @@ public class Creature
    }
    public boolean isAlive()
    {
-       if(hp >0)
+       if(this.hp >0)
        {
            return true;
        }
