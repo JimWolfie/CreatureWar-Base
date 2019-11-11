@@ -7,15 +7,15 @@ import java.util.ArrayList;
  */
 public class War
 {
-    public ArrayList army1;
-    public ArrayList army2;
+    public ArrayList<Creature> army1;
+    public ArrayList<Creature> army2;
     /**
      * Constructor for objects of class War
      */
     public War()
     {
-        army2= new ArrayList<Object>();
-        army1= new ArrayList<Object>();
+        army2= new ArrayList<Creature>();
+        army1= new ArrayList<Creature>();
         this.set();
     }
     /**
@@ -32,8 +32,38 @@ public class War
         army2.add(new Balrog());
         
     }
-    public boolean fight()
+    public void fight()
     {
+        int a =0; 
+        int b =0;
+        int q = army1.size();
+        int p = army2.size();
+        while(army1.get(a).isAlive() && army2.get(b).isAlive()){
+        army1.get(a).takeWound(army2.get(b).damage());
+        army2.get(b).takeWound(army1.get(a).damage());
+        if (!army1.get(a).isAlive())
+        {
+            a++;
+        }
+        if (!army2.get(b).isAlive())
+        {
+            b++;
+        }
+        //check if army is dead
+        if (a>q && b>p) //both
+        {
+            System.out.println("both army Died");
+            return;
+        }else if(a>q) //only a
+        {
+            System.out.println("army a Died");
+            return;
+        }else if(b>p)//only b
+        {
+            System.out.println("army b Died");
+            return;
+        }
+    }
         
     }
 }

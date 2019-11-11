@@ -34,9 +34,9 @@ public class Demon extends Creature
     {
         if(ThreadLocalRandom.current().nextInt(0,100) >5)
         {
-            return ThreadLocalRandom.current().nextInt(this.strength)+1+50;
+            return super.damage()+50;
         }
-        return ThreadLocalRandom.current().nextInt(this.strength)+1;
+        return super.damage();
     }
 
 }

@@ -25,10 +25,10 @@ public class Elf extends Creature
     {
         if(ThreadLocalRandom.current().nextInt(0, 10) == 1)
         {
-            return (ThreadLocalRandom.current().nextInt(this.strength)+1) *2 ;
+            return super.damage() *2 ;
             
         }
-        return ThreadLocalRandom.current().nextInt(this.strength)+1;
+        return super.damage();
     }
 
     

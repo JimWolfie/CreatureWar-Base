@@ -25,7 +25,7 @@ public class Balrog extends Demon
     public int damage()
     {
         
-        return ThreadLocalRandom.current().nextInt(this.strength)+1 + ThreadLocalRandom.current().nextInt(this.strength)+1;
+        return super.damage() + super.damage();
     }
 
 }
