@@ -2,8 +2,8 @@ import java.util.concurrent.ThreadLocalRandom;
 /**
  * Write a description of class Demon here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author lindgren
+ * @version 11/10/19
  */
 public class Demon extends Creature
 {
@@ -34,9 +34,9 @@ public class Demon extends Creature
     {
         if(ThreadLocalRandom.current().nextInt(0,100) >5)
         {
-            return super.damage()+50;
+            return ThreadLocalRandom.current().nextInt(this.strength)+1+50;
         }
-        return super.damage();
+        return ThreadLocalRandom.current().nextInt(this.strength)+1;
     }
 
 }

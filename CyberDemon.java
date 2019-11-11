@@ -1,9 +1,10 @@
+import java.util.concurrent.ThreadLocalRandom;
 
 /**
- * Write a description of class CyberDemon here.
+ * cyber demon class extends demon 
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author NicholasLindgren
+ * @version 11/10/19
  */
 public class CyberDemon extends Demon
 {
@@ -15,19 +16,8 @@ public class CyberDemon extends Demon
      */
     public CyberDemon()
     {
-        // initialise instance variables
-        x = 0;
+        super(ThreadLocalRandom.current().nextInt(25,101), ThreadLocalRandom.current().nextInt(20,41));
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
-    }
+    
 }

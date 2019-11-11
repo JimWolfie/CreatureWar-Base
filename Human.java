@@ -15,6 +15,7 @@ public class Human extends Creature
         super(ThreadLocalRandom.current().nextInt(10,31), ThreadLocalRandom.current().nextInt(5,19));
         
     }
+   
     
 
     
