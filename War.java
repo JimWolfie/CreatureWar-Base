@@ -18,6 +18,10 @@ public class War
         army1= new ArrayList<Object>();
         this.set();
     }
+    /**
+     * set
+     * adds army sample to array list
+     */
     private void set()
     {
         army1.add(new Human());
@@ -28,5 +32,8 @@ public class War
         army2.add(new Balrog());
         
     }
-    
+    public boolean fight()
+    {
+        
+    }
 }
